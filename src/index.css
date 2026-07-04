@@ -9,18 +9,18 @@ html {
 }
 
 body {
-  margin: 0;
   background: #030712;
-  color: #f8fafc;
-  font-family: "Inter", sans-serif;
-  overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-::selection {
-  background: #06b6d4;
   color: white;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+code,
+.mono {
+  font-family: "JetBrains Mono", monospace;
 }
