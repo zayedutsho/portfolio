@@ -3,6 +3,8 @@ import { FaEnvelope, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import Background from "../Background/Background";
 
+import me from "../../assets/me.png";
+
 const Hero = () => {
   return (
     <section
@@ -118,7 +120,7 @@ const Hero = () => {
 
             <div className="relative overflow-hidden rounded-full border-4 border-cyan-400 bg-slate-900 p-2 shadow-[0_0_50px_#06b6d4]">
               <img
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&auto=format&fit=crop&q=80"
+                src={me}
                 alt="Developer"
                 className="h-80 w-80 rounded-full object-cover transition duration-500 group-hover:scale-105"
               />

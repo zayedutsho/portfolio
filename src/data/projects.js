@@ -90,6 +90,12 @@ const projects = [
       "AI expiry prediction",
       "Mobile app",
     ],
+    features: [
+      "JWT Authentication",
+      "Role Based Dashboard",
+      "Responsive Design",
+      "Payment Integration",
+    ],
   },
 ];
 
