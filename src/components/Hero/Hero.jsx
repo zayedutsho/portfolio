@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { FaEnvelope, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-import Background from "../Background/Background";
-
 import me from "../../assets/me.png";
+import Background from "../Background/Background";
 
 const Hero = () => {
   return (
@@ -59,10 +58,13 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="mt-10 flex flex-wrap gap-5">
-            <button className="rounded-xl bg-cyan-500 px-7 py-4 font-semibold transition duration-300 hover:-translate-y-1 hover:bg-cyan-400 hover:shadow-[0_0_30px_#06b6d4]">
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center justify-center rounded-xl bg-cyan-500 px-7 py-4 font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-cyan-400 hover:shadow-[0_0_30px_#06b6d4]"
+            >
               Download Resume
-            </button>
-
+            </a>
             <button className="rounded-xl border border-cyan-500 px-7 py-4 transition duration-300 hover:bg-cyan-500 hover:shadow-[0_0_20px_#06b6d4]">
               Contact Me
             </button>

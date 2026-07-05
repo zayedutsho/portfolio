@@ -52,7 +52,7 @@ const Navbar = () => {
 
           <a
             href="/resume.pdf"
-            target="_blank"
+            download
             className="rounded-xl bg-cyan-500 px-5 py-3 font-semibold text-black transition hover:bg-cyan-400"
           >
             Resume
@@ -85,7 +85,7 @@ const Navbar = () => {
 
             <a
               href="/resume.pdf"
-              target="_blank"
+              download
               className="rounded-lg bg-cyan-500 px-5 py-3 text-center font-semibold text-black"
             >
               Resume
