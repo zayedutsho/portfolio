@@ -1,15 +1,18 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from "./pages/Home";
-import ProjectDetails from "./pages/ProjectDetails";
+const Home = lazy(() => import("./pages/Home"));
+const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/project/:slug" element={<ProjectDetails />} />
-      </Routes>
+      <Suspense fallback={<div className="min-h-screen bg-[#030712]" />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/:slug" element={<ProjectDetails />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

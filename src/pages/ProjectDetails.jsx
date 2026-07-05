@@ -30,6 +30,9 @@ const ProjectDetails = () => {
         <img
           src={project.image}
           alt={project.title}
+          loading="lazy"
+          decoding="async"
+          sizes="(max-width: 768px) 100vw, 75vw"
           className="mb-10 h-[450px] w-full rounded-3xl object-cover"
         />
 

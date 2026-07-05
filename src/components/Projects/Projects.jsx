@@ -48,6 +48,9 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="h-60 w-full object-cover transition duration-700 group-hover:scale-110"
                 />
               </div>

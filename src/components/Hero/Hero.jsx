@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaEnvelope, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-import me from "../../assets/me.png";
+import me from "../../assets/me.webp";
 import Background from "../Background/Background";
 
 const Hero = () => {
@@ -124,6 +124,10 @@ const Hero = () => {
               <img
                 src={me}
                 alt="Developer"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                sizes="(max-width: 768px) 280px, 320px"
                 className="h-80 w-80 rounded-full object-cover transition duration-500 group-hover:scale-105"
               />
             </div>

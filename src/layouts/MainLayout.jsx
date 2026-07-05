@@ -1,13 +1,15 @@
-import About from "../components/About/About";
-import Contact from "../components/Contact/Contact";
-import Education from "../components/Education/Education";
-import Experience from "../components/Experience/Experience";
+import { Suspense, lazy } from "react";
 import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
-import Projects from "../components/Projects/Projects";
 import ScrollProgress from "../components/ScrollProgress/ScrollProgress";
-import Skills from "../components/Skills/Skills";
+
+const About = lazy(() => import("../components/About/About"));
+const Contact = lazy(() => import("../components/Contact/Contact"));
+const Education = lazy(() => import("../components/Education/Education"));
+const Experience = lazy(() => import("../components/Experience/Experience"));
+const Projects = lazy(() => import("../components/Projects/Projects"));
+const Skills = lazy(() => import("../components/Skills/Skills"));
 
 const MainLayout = () => {
   return (
@@ -15,14 +17,16 @@ const MainLayout = () => {
       <Navbar />
 
       <main>
-        <Hero></Hero>
-        <About />
-        <Skills />
-        <Experience />
-        <Education />
-        <Projects />
-        <Contact />
-        <ScrollProgress></ScrollProgress>
+        <Hero />
+        <Suspense fallback={null}>
+          <About />
+          <Skills />
+          <Experience />
+          <Education />
+          <Projects />
+          <Contact />
+        </Suspense>
+        <ScrollProgress />
       </main>
 
       <Footer />
