@@ -3,8 +3,7 @@ const projects = [
     id: "spill-rx",
     title: "Spill Rx",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&auto=format&fit=crop&q=80",
-
+      "https://images.unsplash.com/photo-1580281657521-8968b2e51d62?w=1200&auto=format&fit=crop&q=80",
     description:
       "A full-stack healthcare community platform where users can anonymously share medication experiences, discuss treatments, and connect with others in a secure environment.",
 
