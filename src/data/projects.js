@@ -33,6 +33,45 @@ const projects = [
   },
 
   {
+    id: "gearup-backend",
+    title: "GearUp Backend API",
+    image:
+      "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1200&auto=format&fit=crop&q=80",
+    description:
+      "A production-ready REST API for a sports and outdoor rental platform with customer, provider, and admin roles, secure authentication, Stripe payments, and role-based authorization.",
+    technologies: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Stripe",
+      "JWT",
+      "Zod",
+    ],
+    live: "https://gearup-backend-sage.vercel.app/",
+    github: "https://github.com/zayedutsho/gearup-backend.git",
+    challenges: [
+      "Designing multi-role access control",
+      "Implementing Stripe checkout and webhook verification",
+      "Managing rental lifecycle workflows",
+      "Ensuring secure token-based authentication",
+    ],
+    improvements: [
+      "Admin analytics dashboard",
+      "Real-time notification system",
+      "Mobile-friendly provider portal",
+      "Expanded review moderation tools",
+    ],
+    features: [
+      "JWT access and refresh token authentication",
+      "Cookie and bearer token support",
+      "Role-based authorization for customers, providers, and admins",
+      "Stripe checkout and payment verification",
+    ],
+  },
+
+  {
     id: "contest-arena",
     title: "Contest Arena",
     image:

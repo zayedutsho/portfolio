@@ -7,7 +7,7 @@ const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div className="min-h-screen bg-[#030712]" />}>
+      <Suspense fallback={<div className="min-h-screen bg-[var(--bg)]" />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/:slug" element={<ProjectDetails />} />

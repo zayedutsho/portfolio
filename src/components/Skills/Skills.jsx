@@ -8,10 +8,10 @@ const Skills = () => {
   const [active, setActive] = useState("frontend");
 
   return (
-    <section id="skills" className="bg-[#030712] py-28 text-white">
+    <section id="skills" className="bg-[var(--bg)] py-28 text-[var(--text)]">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center">
-          <p className="font-mono text-cyan-400">Technologies I Use</p>
+          <p className="font-mono text-[var(--accent)]">Technologies I Use</p>
           <h2 className="mt-3 text-5xl font-bold">Skills</h2>
         </div>
 
@@ -22,8 +22,8 @@ const Skills = () => {
               onClick={() => setActive(item)}
               className={`rounded-full px-6 py-3 capitalize transition ${
                 active === item
-                  ? "bg-cyan-500 text-black"
-                  : "bg-white/5 text-slate-300 hover:bg-cyan-500/20"
+                  ? "bg-[var(--accent)] text-[var(--surface-strong)]"
+                  : "bg-[var(--card)] text-[var(--muted)] hover:bg-[var(--accent-soft)]"
               }`}
             >
               {item}
@@ -44,12 +44,12 @@ const Skills = () => {
                   y: -8,
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="group rounded-2xl border border-cyan-500/20 bg-slate-900/60 p-8 text-center backdrop-blur-lg hover:border-cyan-400 hover:shadow-[0_0_35px_rgba(6,182,212,.35)]"
+                className="group rounded-2xl border border-[color:var(--border)] bg-[var(--card)] p-8 text-center backdrop-blur-lg hover:border-[color:var(--accent)] hover:shadow-[0_0_35px_rgba(6,182,212,.35)]"
               >
-                <div className="mb-4 flex justify-center text-4xl text-cyan-400">
+                <div className="mb-4 flex justify-center text-4xl text-[var(--accent)]">
                   <Icon />
                 </div>
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg font-semibold text-[var(--text)]">
                   {skill.name}
                 </h3>
               </motion.div>

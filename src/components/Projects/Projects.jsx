@@ -7,29 +7,23 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-[#030712] py-28 text-white"
+      className="relative overflow-hidden bg-[var(--bg)] py-28 text-[var(--text)]"
     >
       <div className="mx-auto max-w-7xl px-6">
-        {/* Heading */}
-
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-20 text-center"
         >
-          <p className="font-mono text-cyan-400">Portfolio</p>
-
+          <p className="font-mono text-[var(--accent)]">Portfolio</p>
           <h2 className="mt-3 text-5xl font-bold">Featured Projects</h2>
-
-          <p className="mx-auto mt-6 max-w-2xl text-slate-400">
+          <p className="mx-auto mt-6 max-w-2xl text-[var(--muted)]">
             A collection of projects showcasing my experience in full-stack
             development, modern UI/UX, scalable backend systems, and real-world
             problem solving.
           </p>
         </motion.div>
-
-        {/* Cards */}
 
         <div className="grid gap-10 lg:grid-cols-3">
           {projects.map((project, index) => (
@@ -40,10 +34,8 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
               whileHover={{ y: -10 }}
-              className="group overflow-hidden rounded-3xl border border-cyan-500/20 bg-slate-900/60 backdrop-blur-xl"
+              className="group overflow-hidden rounded-3xl border border-[color:var(--border)] bg-[var(--card)] backdrop-blur-xl"
             >
-              {/* Image */}
-
               <div className="overflow-hidden">
                 <img
                   src={project.image}
@@ -55,29 +47,22 @@ const Projects = () => {
                 />
               </div>
 
-              {/* Content */}
-
               <div className="p-6">
                 <h3 className="text-2xl font-bold">{project.title}</h3>
-
-                <p className="mt-4 line-clamp-3 text-slate-400">
+                <p className="mt-4 line-clamp-3 text-[var(--muted)]">
                   {project.description}
                 </p>
-
-                {/* Tech */}
 
                 <div className="mt-6 flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-3 py-1 text-sm text-cyan-300"
+                      className="rounded-full border border-[color:var(--border)] bg-[var(--accent-soft)] px-3 py-1 text-sm text-[var(--accent)]"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-
-                {/* Buttons */}
 
                 <div className="mt-8 flex items-center justify-between">
                   <div className="flex gap-3">
@@ -85,7 +70,7 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-lg bg-cyan-500 p-3 text-black transition hover:bg-cyan-400"
+                      className="rounded-lg bg-[var(--accent)] p-3 text-[var(--surface-strong)] transition hover:bg-[var(--accent-strong)]"
                     >
                       <FaGlobe />
                     </a>
@@ -94,7 +79,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-lg border border-cyan-500 p-3 transition hover:bg-cyan-500"
+                      className="rounded-lg border border-[color:var(--accent)] p-3 transition hover:bg-[var(--accent-soft)]"
                     >
                       <FaGithub />
                     </a>
@@ -102,7 +87,7 @@ const Projects = () => {
 
                   <Link
                     to={`/project/${project.id}`}
-                    className="flex items-center gap-2 font-medium text-cyan-400 transition hover:gap-4"
+                    className="flex items-center gap-2 font-medium text-[var(--accent)] transition hover:gap-4"
                   >
                     View Details
                     <FaArrowRight />

@@ -1,7 +1,38 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --bg-soft: #eef4ff;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: rgba(15, 23, 42, 0.1);
+  --accent: #0f766e;
+  --accent-strong: #14b8a6;
+  --accent-soft: rgba(20, 184, 166, 0.16);
+  --card: rgba(255, 255, 255, 0.9);
+  --card-2: rgba(248, 250, 252, 0.95);
+  --hero-glow: rgba(20, 184, 166, 0.16);
+}
+
+.dark {
   color-scheme: dark;
+  --bg: #020617;
+  --bg-soft: #071120;
+  --surface: rgba(2, 6, 23, 0.82);
+  --surface-strong: #030712;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: rgba(34, 211, 238, 0.16);
+  --accent: #22d3ee;
+  --accent-strong: #67e8f9;
+  --accent-soft: rgba(34, 211, 238, 0.16);
+  --card: rgba(15, 23, 42, 0.8);
+  --card-2: rgba(15, 23, 42, 0.68);
+  --hero-glow: rgba(34, 211, 238, 0.18);
 }
 
 html {
@@ -9,9 +40,13 @@ html {
 }
 
 body {
-  background: #030712;
-  color: white;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
   font-family: "Inter", sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 h1,
